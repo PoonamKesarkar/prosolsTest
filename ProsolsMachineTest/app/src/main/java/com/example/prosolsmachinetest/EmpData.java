@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(tableName = "tableName")
 public class EmpData {
 
     @PrimaryKey(autoGenerate = true)
@@ -60,5 +60,16 @@ public class EmpData {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "EmpData{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", phoneNo='" + phoneNo + '\'' +
+                ", emailId='" + emailId + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }

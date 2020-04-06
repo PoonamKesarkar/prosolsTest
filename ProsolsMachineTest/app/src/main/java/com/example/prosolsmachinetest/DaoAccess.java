@@ -11,8 +11,8 @@ import androidx.room.Update;
 @Dao
 public interface DaoAccess {
 
-  /*  @Query("SELECT * FROM ")
-    List<EmpData> getAll();*/
+    @Query("SELECT * FROM tableName")
+    List<EmpData> getAll();
 
     @Insert
     void insert(EmpData empData);
